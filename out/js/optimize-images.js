@@ -7,8 +7,8 @@ const AWS = require("aws-sdk");
 const S3_BUCKET = process.env.S3_BUCKET;
 const S3_REGION = process.env.S3_REGION;
 const S3_METADATA_KEY = "metadata.json";
-const IMAGE_DIR = "./images";
-const OPTIMIZED_DIR = "./optimized";
+const IMAGE_DIR = path.join(__dirname, "../images");
+const OPTIMIZED_DIR = path.join(__dirname, "../optimized");
 
 const s3 = new AWS.S3({ region: S3_REGION });
 
